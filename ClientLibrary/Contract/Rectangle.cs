@@ -31,42 +31,75 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for rectangle.
     /// </summary>
-    public class ClientError
+    public class Rectangle
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the left.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The left of the face rectangle.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public int Left { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the top.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The top of the face rectangle.
         /// </value>
-        public Guid RequestId { get; set; }
+        public int Top { get; set; }
+        /// <summary>
+        /// Gets or sets the width.
+        /// </summary>
+        /// <value>
+        /// The width.
+        /// </value>
+        public int Width { get; set; }
+
+        /// <summary>
+        /// Gets or sets the height.
+        /// </summary>
+        /// <value>
+        /// The height.
+        /// </value>
+        public int Height { get; set; }
+
+        /// <summary>
+        /// Froms the string.
+        /// </summary>
+        /// <param name="string">The string.</param>
+        /// <returns>The Rectangle.</returns>
+        public static Rectangle FromString(string @string)
+        {
+            if (!string.IsNullOrWhiteSpace(@string))
+            {
+                var box = @string.Split(',');
+                int left, top, width, height;
+
+                if (box.Length == 4)
+                {
+                    if (int.TryParse(box[0], out left) &&
+                        int.TryParse(box[1], out top) &&
+                        int.TryParse(box[2], out width) &&
+                        int.TryParse(box[3], out height))
+                    {
+                        return new Rectangle()
+                        {
+                            Left = left,
+                            Height = height,
+                            Top = top,
+                            Width = width
+                        };
+                    }
+                }
+            }
+
+            return null;
+        }
     }
 }

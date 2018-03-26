@@ -31,42 +31,44 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
+using Newtonsoft.Json;
 
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for OCR word.
     /// </summary>
-    public class ClientError
+    public class Word
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the bounding box.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The bounding box.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public string BoundingBox { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the text.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The text.
         /// </value>
-        public Guid RequestId { get; set; }
+        public string Text { get; set; }
+
+        /// <summary>
+        /// Gets the rectangle.
+        /// </summary>
+        /// <value>
+        /// The rectangle.
+        /// </value>
+        [JsonIgnore]
+        public Rectangle Rectangle
+        {
+            get
+            {
+                return Rectangle.FromString(this.BoundingBox);
+            }
+        }
     }
 }

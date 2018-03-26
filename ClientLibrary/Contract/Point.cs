@@ -31,42 +31,24 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class of Point
     /// </summary>
-    public class ClientError
+    public class Point
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Gets or sets the X value of point
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        /// <value>The x value</value>
+        public int X { get; set; }
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the Y value of point
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        /// <value>The y value</value>
+        public int Y { get; set; }
 
-        /// <summary>
-        /// Gets or sets the request identifier.
-        /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
     }
 }

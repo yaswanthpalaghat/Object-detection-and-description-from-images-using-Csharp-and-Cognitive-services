@@ -31,42 +31,46 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
+using System.Collections.Generic;
 
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class of polygon
     /// </summary>
-    public class ClientError
+    public class Polygon
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Constructor of the class
         /// </summary>
-        public string Code
+        public Polygon()
         {
-            get;
-            set;
+            Points = new List<Point>();
         }
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Gets and sets the points of polygon
         /// </summary>
         /// <value>
-        /// The message.
+        /// The points of polygon
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public List<Point> Points { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Get a polygon object from boundingbox array
         /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        /// <param name="boundingBox"> The boundingBox array</param>
+        /// <returns>The polygon</returns>
+        public static Polygon FromArray(int[] boundingBox)
+        {
+            Polygon polygon = new Polygon();
+
+            for (int i = 0; i + 1 < boundingBox.Length; i += 2)
+            {
+                polygon.Points.Add(new Point() { X = boundingBox[i], Y = boundingBox[i + 1] });
+            }
+
+            return polygon;
+        }
     }
 }

@@ -31,42 +31,43 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for OCR.
     /// </summary>
-    public class ClientError
+    public class OcrResults
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the language.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The language.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public string Language { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the text angle.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The text angle.
         /// </value>
-        public Guid RequestId { get; set; }
+        public double? TextAngle { get; set; }
+
+        /// <summary>
+        /// Gets or sets the orientation.
+        /// </summary>
+        /// <value>
+        /// The orientation.
+        /// </value>
+        public string Orientation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the regions.
+        /// </summary>
+        /// <value>
+        /// The regions.
+        /// </value>
+        public Region[] Regions { get; set; }
     }
 }

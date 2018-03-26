@@ -31,42 +31,44 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
+using Newtonsoft.Json;
 
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class of HandwritingTextLine.
     /// </summary>
-    public class ClientError
+    public class HandwritingTextLine
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the bounding box.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The bounding box.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public int[] BoundingBox { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the words.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The words.
         /// </value>
-        public Guid RequestId { get; set; }
+        public HandwritingTextWord[] Words { get; set; }
+
+        /// <summary>
+        /// Gets the polygon
+        /// </summary>
+        /// <value>
+        /// The polygon
+        /// </value>
+        [JsonIgnore]
+        public Polygon Polygon
+        {
+            get
+            {
+                return Polygon.FromArray(this.BoundingBox);
+            }
+        }
     }
 }

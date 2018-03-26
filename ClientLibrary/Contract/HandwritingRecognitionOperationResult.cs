@@ -31,42 +31,27 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    ///  The class of HandwritingRecognitionOperationResult
     /// </summary>
-    public class ClientError
+    public class HandwritingRecognitionOperationResult
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or Sets the status
         /// </summary>
         /// <value>
-        /// The message.
+        /// The status
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public HandwritingRecognitionOperationStatus Status { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the RecognitionResult
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The result of recognition
         /// </value>
-        public Guid RequestId { get; set; }
+        public HandwritingTextResult RecognitionResult { get; set; }
     }
 }

@@ -31,42 +31,16 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// Type returned when enumerating domain-specific image analysis models.
     /// </summary>
-    public class ClientError
+    public class ModelResult
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// List of models currently supported by the API.
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
-        /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the request identifier.
-        /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        public Model[] Models { get; set; }
     }
 }

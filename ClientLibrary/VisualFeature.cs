@@ -31,42 +31,43 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
 namespace Microsoft.ProjectOxford.Vision
 {
-    /// <summary>
-    /// Container of ClientError and Error Entity.
-    /// </summary>
-    public class ClientError
+    public enum VisualFeature
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Clipart or a line drawing.
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        ImageType,
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Accent color, dominant color, and whether an image is monochromatic.
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        Color,
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Faces, if present, coordinates, gender and age.
         /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        Faces,
+
+        /// <summary>
+        /// Raciness; pornographic in nature (nudity or sex act). Sexually suggestive content is also detected.
+        /// </summary>
+        Adult,
+
+        /// <summary>
+        /// Image categorizations; taxonomy defined in documentation.
+        /// </summary>
+        Categories,
+
+        /// <summary>
+        /// Image tags.
+        /// </summary>
+        Tags,
+
+        /// <summary>
+        /// Image description.
+        /// </summary>
+        Description
     }
 }

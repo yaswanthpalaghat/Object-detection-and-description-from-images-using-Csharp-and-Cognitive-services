@@ -31,42 +31,43 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for adult.
     /// </summary>
-    public class ClientError
+    public class Adult
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets a value indicating whether this instance is adult content.
         /// </summary>
         /// <value>
-        /// The message.
+        /// <c>true</c> if this instance is adult content; otherwise, <c>false</c>.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public bool IsAdultContent { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets a value indicating whether this instance is racy content.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// <c>true</c> if this instance is racy content; otherwise, <c>false</c>.
         /// </value>
-        public Guid RequestId { get; set; }
+        public bool IsRacyContent { get; set; }
+
+        /// <summary>
+        /// Gets or sets the adult score.
+        /// </summary>
+        /// <value>
+        /// The adult score.
+        /// </value>
+        public double AdultScore { get; set; }
+
+        /// <summary>
+        /// Gets or sets the racy score.
+        /// </summary>
+        /// <value>
+        /// The racy score.
+        /// </value>
+        public double RacyScore { get; set; }
     }
 }

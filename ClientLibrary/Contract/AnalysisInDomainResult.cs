@@ -30,37 +30,15 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
-
 using System;
 
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for analysis result.
     /// </summary>
-    public class ClientError
+    public class AnalysisInDomainResult
     {
-        /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
-        /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
         /// <summary>
         /// Gets or sets the request identifier.
         /// </summary>
@@ -68,5 +46,19 @@ namespace Microsoft.ProjectOxford.Vision
         /// The request identifier.
         /// </value>
         public Guid RequestId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the metadata.
+        /// </summary>
+        /// <value>
+        /// The metadata.
+        /// </value>
+        public Metadata Metadata { get; set; }
+
+        /// <summary>
+        /// Gets or sets the result of the domain-specific image analysis.
+        /// The actual content will depend on the model invoked.
+        /// </summary>
+        public object Result { get; set; }
     }
 }

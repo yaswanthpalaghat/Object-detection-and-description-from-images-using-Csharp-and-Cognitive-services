@@ -31,42 +31,28 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
+
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// Image Type
     /// </summary>
-    public class ClientError
+    public class ImageType
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the type of the clip art.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The type of the clip art.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public int ClipArtType { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the type of the line drawing.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The type of the line drawing.
         /// </value>
-        public Guid RequestId { get; set; }
+        public int LineDrawingType { get; set; }
     }
 }

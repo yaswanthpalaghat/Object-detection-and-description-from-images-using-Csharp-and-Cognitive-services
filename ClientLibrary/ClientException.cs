@@ -1,15 +1,15 @@
-﻿// 
+﻿//
 // Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license.
-// 
+//
 // Microsoft Cognitive Services (formerly Project Oxford): https://www.microsoft.com/cognitive-services
-// 
+//
 // Microsoft Cognitive Services (formerly Project Oxford) GitHub:
-// https://github.com/Microsoft/Cognitive-Common-Windows
-// 
+// https://github.com/Microsoft/Cognitive-Vision-Windows
+//
 // Copyright (c) Microsoft Corporation
 // All rights reserved.
-// 
+//
 // MIT License:
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -18,10 +18,10 @@
 // distribute, sublicense, and/or sell copies of the Software, and to
 // permit persons to whom the Software is furnished to do so, subject to
 // the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be
 // included in all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -29,12 +29,12 @@
 // LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-// 
+//
 
 using System;
 using System.Net;
 
-namespace Microsoft.ProjectOxford.Common
+namespace Microsoft.ProjectOxford.Vision
 {
     /// <summary>
     /// The Exception will be shown to client.
@@ -128,17 +128,15 @@ namespace Microsoft.ProjectOxford.Common
         /// <summary>
         /// Gets http status of http response.
         /// </summary>
-        /// <value>
-        /// The HTTP status.
-        /// </value>
-        public HttpStatusCode HttpStatus { get; private set; }
+        public HttpStatusCode HttpStatus
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Gets or sets the httpError message.
         /// </summary>
-        /// <value>
-        /// The error.
-        /// </value>
         public ClientError Error { get; set; }
 
         /// <summary>
@@ -149,12 +147,12 @@ namespace Microsoft.ProjectOxford.Common
         public static ClientException BadRequest(string message)
         {
             return new ClientException(
-                new ClientError()
-                {
-                    Code = ((int)HttpStatusCode.BadRequest).ToString(),
-                    Message = message
-                },
-                HttpStatusCode.BadRequest);
+                         new ClientError()
+                         {
+                             Code = ((int)HttpStatusCode.BadRequest).ToString(),
+                             Message = message
+                         },
+                         HttpStatusCode.BadRequest);
         }
     }
 }

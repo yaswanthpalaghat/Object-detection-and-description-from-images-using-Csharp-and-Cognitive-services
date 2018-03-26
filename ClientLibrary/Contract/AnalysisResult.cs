@@ -30,37 +30,16 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
-
 using System;
 
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
+
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for analysis result.
     /// </summary>
-    public class ClientError
+    public class AnalysisResult
     {
-        /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
-        /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
         /// <summary>
         /// Gets or sets the request identifier.
         /// </summary>
@@ -68,5 +47,69 @@ namespace Microsoft.ProjectOxford.Vision
         /// The request identifier.
         /// </value>
         public Guid RequestId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the metadata.
+        /// </summary>
+        /// <value>
+        /// The metadata.
+        /// </value>
+        public Metadata Metadata { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the image.
+        /// </summary>
+        /// <value>
+        /// The type of the image.
+        /// </value>
+        public ImageType ImageType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the color.
+        /// </summary>
+        /// <value>
+        /// The color.
+        /// </value>
+        public Color Color { get; set; }
+
+        /// <summary>
+        /// Gets or sets the adult.
+        /// </summary>
+        /// <value>
+        /// The adult.
+        /// </value>
+        public Adult Adult { get; set; }
+
+        /// <summary>
+        /// Gets or sets the categories.
+        /// </summary>
+        /// <value>
+        /// The categories.
+        /// </value>
+        public Category[] Categories { get; set; }
+
+        /// <summary>
+        /// Gets or sets the faces.
+        /// </summary>
+        /// <value>
+        /// The faces.
+        /// </value>
+        public Face[] Faces { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tags for the image.
+        /// </summary>
+        /// <value>
+        /// The list of tags.
+        /// </value>
+        public Tag[] Tags { get; set; }
+
+        /// <summary>
+        /// Gets or sets the image description.
+        /// </summary>
+        /// <value>
+        /// The description.
+        /// </value>
+        public Description Description { get; set; }
     }
 }

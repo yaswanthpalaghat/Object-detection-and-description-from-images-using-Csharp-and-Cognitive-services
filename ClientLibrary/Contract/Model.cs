@@ -31,42 +31,22 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// A domain-specific image analysis model.
     /// </summary>
-    public class ClientError
+    public class Model
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Name of the domain.  Use this name in the URL for domain-constrained image analysis.
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Categories represented in this domain.
+        /// The categories must correspond to the taxonomy defined in the Vision API.
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the request identifier.
-        /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        public string[] Categories { get; set; }
     }
 }

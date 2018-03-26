@@ -31,42 +31,19 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class of HandwritingTextResult
     /// </summary>
-    public class ClientError
+    public class HandwritingTextResult
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the lines.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The lines.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the request identifier.
-        /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        public HandwritingTextLine[] Lines { get; set; }
     }
 }

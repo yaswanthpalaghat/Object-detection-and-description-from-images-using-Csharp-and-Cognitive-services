@@ -31,42 +31,26 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// Tag discerned through image analysis.
     /// </summary>
-    public class ClientError
+    public class Tag
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Name of the tag.
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Confidence score for the tag.
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public double Confidence { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Optional hint/details for this tag.
         /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        public string Hint { get; set; }
     }
 }

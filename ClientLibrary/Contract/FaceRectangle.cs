@@ -31,42 +31,43 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The face rectangle entity.
     /// </summary>
-    public class ClientError
+    public class FaceRectangle
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
-        /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the width.
         /// </summary>
         /// <value>
-        /// The message.
+        /// The width.
         /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        public int Width { get; set; }
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// Gets or sets the height.
         /// </summary>
         /// <value>
-        /// The request identifier.
+        /// The height.
         /// </value>
-        public Guid RequestId { get; set; }
+        public int Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the left.
+        /// </summary>
+        /// <value>
+        /// The left.
+        /// </value>
+        public int Left { get; set; }
+
+        /// <summary>
+        /// Gets or sets the top.
+        /// </summary>
+        /// <value>
+        /// The top.
+        /// </value>
+        public int Top { get; set; }
     }
 }

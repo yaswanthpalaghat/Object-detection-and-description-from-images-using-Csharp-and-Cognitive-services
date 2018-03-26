@@ -31,42 +31,32 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The enum of HandwritingRecognitionOperationStatus
     /// </summary>
-    public class ClientError
+    //[JsonConverter(typeof(StringEnumConverter))]
+    public enum HandwritingRecognitionOperationStatus
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// not started
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        NotStarted,
 
         /// <summary>
-        /// Gets or sets the message.
+        /// running
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
+        Running,
 
         /// <summary>
-        /// Gets or sets the request identifier.
+        /// succeeded
         /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        Succeeded,
+
+        /// <summary>
+        /// failed
+        /// </summary>
+        Failed,
     }
 }

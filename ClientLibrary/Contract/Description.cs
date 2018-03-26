@@ -31,42 +31,21 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using System;
-
-namespace Microsoft.ProjectOxford.Vision
+namespace Microsoft.ProjectOxford.Vision.Contract
 {
     /// <summary>
-    /// Container of ClientError and Error Entity.
+    /// The class for image description.
     /// </summary>
-    public class ClientError
+    public class Description
     {
         /// <summary>
-        /// Gets or sets error code in error entity.
+        /// Gets or sets the caption type.
         /// </summary>
-        public string Code
-        {
-            get;
-            set;
-        }
+        public string[] Tags { get; set; }
 
         /// <summary>
-        /// Gets or sets the message.
+        /// Gets or sets the collection of captions.
         /// </summary>
-        /// <value>
-        /// The message.
-        /// </value>
-        public string Message
-        {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Gets or sets the request identifier.
-        /// </summary>
-        /// <value>
-        /// The request identifier.
-        /// </value>
-        public Guid RequestId { get; set; }
+        public Caption[] Captions { get; set; }
     }
 }
