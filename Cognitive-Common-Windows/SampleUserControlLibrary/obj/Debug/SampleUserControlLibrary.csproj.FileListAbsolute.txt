@@ -1,0 +1,17 @@
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\bin\Debug\SampleUserControlLibrary.dll
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\bin\Debug\SampleUserControlLibrary.pdb
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControl.g.cs
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SubscriptionKeyPage.g.cs
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\VideoResultControl.g.cs
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary_MarkupCompile.cache
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary_MarkupCompile.lref
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControl.baml
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SubscriptionKeyPage.baml
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\VideoResultControl.baml
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.g.resources
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.SampleUserControlLibrary.Properties.Resources.resources
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.csproj.GenerateResource.cache
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.dll
+C:\Users\Mr\Desktop\vision-windows\Cognitive-Common-Windows\SampleUserControlLibrary\obj\Debug\SampleUserControlLibrary.pdb
